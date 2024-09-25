@@ -26,9 +26,8 @@ public class PemilihanHari22 {
                     break;
                 default:
                     dayType = "invalid day name";
-
-            System.out.println(dayName + "is a" + dayType);
             }
+            System.out.println(dayName + " is a " + dayType);
             sc.close();
     }
     
