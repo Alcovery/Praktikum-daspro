@@ -8,9 +8,10 @@ public class Pemilihan2percobaan1 {
         Scanner sc = new Scanner(System.in);
 
         int pilihan_menu;
-        String member;
+        String member, jenis_pembayaran;
         double diskon, total_bayar;
         int harga;
+        int potonganQRIS = 1000;
 
         System.out.println("_________________________");
         System.out.println("===== MENU KAFE JTI=====");
@@ -45,8 +46,7 @@ public class Pemilihan2percobaan1 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return; // Menghentikan eksekusi lebih lanjut jika pilihan salah
              }
-            
-            // Menghitung total bayar setelah diskon
+            //Menghitung total bayar
             total_bayar = harga - (harga * diskon);
             System.out.println("Total bayar setelah diskon =" + total_bayar);
         }
@@ -68,13 +68,20 @@ public class Pemilihan2percobaan1 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return; // Menghentikan eksekusi lebih lanjut jika pilihan salah
             }
-            // Menghitung total bayar
+
+            total_bayar = harga - (harga * diskon);
             System.out.println("Total bayar = " + harga);
             
         }  else {
             System.out.println("Member tidak valid");
         }
         System.out.println("_________________________");
+
+        if (jenis_pembayaran.equalsIgnoreCase("Qris")) {
+            total_bayar -= potonganQRIS;
+            System.out.println("Potongan QRIS Rp.1000");
+        }
+        System.out.println("Total bayar QRIS" + total_bayar);
     }
     
 }
