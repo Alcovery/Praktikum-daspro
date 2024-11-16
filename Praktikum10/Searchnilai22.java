@@ -3,23 +3,35 @@ package Praktikum10;
 import java.util.Scanner;
 
 public class Searchnilai22 {
-    @SuppressWarnings("unused")
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] arrNilai = {80, 85, 78, 96, 90, 82, 86};
-        int key = 90;
-        int hasil = 0;
+        Scanner sc22 = new Scanner(System.in);
 
-        for (int i = 0; i < arrNilai.length; i++){
-            if (key == arrNilai[i])
+        System.out.println("Masukkan banyaknya nilai uang akan diinput: ");
+        int nilai = sc22.nextInt();
+
+        int[] arrNilai = new int[nilai];
+        
+        for (int i = 0; i < nilai; i++) {
+             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + " : ");
+                arrNilai[i] = sc22.nextInt();
+        }
+
+        System.out.println("Masukkan nilai yang ingin dicari: ");
+        int nilaiDicari = sc22.nextInt();
+        int hasil = -1;
+
+        for (int i = 0; i < arrNilai.length; i++) {
+            if (nilaiDicari == arrNilai [i]) {
                 hasil = i;
                 break;
+            }
         }
-        System.out.println();
-        System.out.println("Nilai "+key+" ketemu di indeks ke-"+hasil);
-        System.out.println();
 
-        sc.close();
+        if (hasil != -1) {
+            System.out.println("Nilai "+nilaiDicari+" ketemu, merupakan  nilai mahasiswa ke-" + (hasil + 1));
+        }
+
+        sc22.close();
     }
    
 }
