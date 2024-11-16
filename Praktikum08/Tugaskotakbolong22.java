@@ -6,7 +6,6 @@ public class Tugaskotakbolong22 {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Masukkan nilai N (minimal 3): ");
         int N = sc.nextInt();
 
