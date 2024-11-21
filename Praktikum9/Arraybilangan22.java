@@ -1,4 +1,4 @@
-package Praktikum10;
+package Praktikum9;
 
 public class Arraybilangan22 {
     public static void main(String[] args) {
